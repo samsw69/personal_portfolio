@@ -1,8 +1,12 @@
 @import "bootstrap/bootstrap-grid";
 @import 'variables';
 @font-face {
-  font-family: punktype;
-  font-family: oxygen_light;
+  font-family: goldenratio_demo;
+  src: url("../assets/fonts/goldenratio_demo.ttf");
+}
+@font-face {
+    font-family: "oxygen_light";
+    src: url("../assets/fonts/oxygen_light.ttf");
 }
 
 * {
@@ -11,12 +15,13 @@
 
 .heading-styles {
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 
 body, p {
-  font-family: oxygen_light;
+    font-size: 18px;
+    font-family: $font;
 }
 
 
@@ -32,16 +37,21 @@ h1, h2, h3 {
 
 h2 {
   font-size: 30px;
-  color: #B8183A;
-  font-family: punktype;
+  color: $brand-secondary;
+  font-family: $heading;
 }
 
 h3 {
   font-size: 10px;
-  font-family: oxygen_light;
+  font-family: $font;
   font-weight: 300;
 }
 
+ol, ul, li {
+  font-family: $font;
+  font-size: 18px;
+  line-height: 32px;
+}
 header {
   z-index: 4;
   position: fixed;
@@ -75,7 +85,7 @@ header {
           font-size: 20px;
         }
         a {
-          color: white;
+          color: $white;
           @extend .heading-styles;
           font-weight: bold;
           position: relative;
@@ -83,7 +93,7 @@ header {
             content: "";
             height: 2px;
             width: 100%;
-            background-color: white;
+            background-color: $white;
             position: absolute;
             bottom: -4px;
             left: 0;
@@ -113,6 +123,10 @@ section {
   h2 {
     font-size: 28px;
   }
+  // p {
+  //   font-family: oxygen_light;
+  //   font-size: 14px;
+  // }
 }
 
 #hero {
@@ -134,12 +148,16 @@ section {
 #projects {
   h2 {
     font-size: 30px;
-    color: #B8183A;
-    font-family: punktype;
+    color: $black;
+    font-family: $heading;
   }
   .image {
     margin-bottom: 15px;
   }
+  // p {
+  //   font-size: 14px;
+  //   font-family: oxygen_light;
+  // }
 }
 
 #resume {
@@ -156,51 +174,53 @@ section {
   }
 }
 
-// #projects {
-//   .image {
-//     margin-bottom: 15px;
-//   }
-// }
-
-// #resumes {
-//   a:not(:last-of-type) {
-//     margin-bottom: 5px;
-//   }
-// }
 .project_title {
   width: 100%;
   z-index: 1;
   position: fixed;
   margin-left: 0px;
-  background-color: white;
+  background-color: $white;
   margin-top: -100px;
   padding-top: 80px;
   img {
     float: left;
   }
   h1 {
-    font-family: punktype;
+    font-family: $heading;
     text-align: left;
     padding-top: 10px;
   }
 }
 
-.project_tech {
-  padding-top: 30px;
+.project_tech_top {
+  border: 1px $brand-secondary;
+  padding-top: 50px;
   text-align: justify;
   margin-top: 100px;
   margin-left: 20px;
   h2 {
-  font-family: punktype;
-  color: #18B89D;
+  font-family: $heading;
+  color: $black;
   padding-bottom: 20px;
   }
   div {
    background-color: $white ;
  }
- p {
-   font-size: 20px;
-   font-family: oxygen_light;
+}
+
+.project_tech {
+  border: 1px $brand-secondary;
+  padding-top: 20px;
+  text-align: justify;
+  margin-top: 30px;
+  margin-left: 20px;
+  h2 {
+  font-family: $heading;
+  color: $black;
+  padding-bottom: 20px;
+  }
+  div {
+   background-color: $white ;
  }
 }
 
@@ -213,29 +233,101 @@ section {
     margin-left: auto;
     margin-right: auto
   }
+  // h3 {
+  //   font-family: $heading;
+  //   font-size: 18px;
+  // }
+
+  h3 {
+    font: oxygen_light;
+    font-size: 20px;
+    font-weight: bold;
+    color: $brand-secondary;
+  }
 }
 
-
-#logos {
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 20px;
+.project_image2 {
+  margin-top: 50px;
+  margin-bottom: 80px;
+  img {
+    width: 500px;
+    // display: block;
+    margin-left: auto;
+    margin-right: auto
+  }
+  h3 {
+    font: oxygen_light;
+    font-size: 20px;
+    font-weight: bold;
+    color: $brand-secondary;
+  }
 }
 
-
-#text {
+.text {
   margin-left: 20px;
   margin-top: 20px;
+  font-family: $font;
+  // font-size: 14px;
+
+}
+#logos, #moreInfo {
+  h2 {
+    padding-bottom: 20px;
+    font-family: $heading;
+  }
+  border-style: solid;
+  border-width: 2px;
+  border-color: $brand-color;
+  border-radius: 50px;
+  padding:0 60px;
+  padding-top: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 30px;
+}
+
+
+#row_2_text, #wins {
+  font-family: oxygen_light;
+  padding-top: 30px;
+  h3 {
+    font: oxygen_light;
+    font-size: 20px;
+    font-weight: bold;
+    color: $brand-secondary;
+
+  }
+}
+
+#wins {
+  border-style: solid;
+  border-width: 2px;
+  border-color: $brand-color;
+  border-radius: 50px;
+  background-color: $brand-color;
+  padding: 40px;
+  padding-bottom: 10px;
+  // padding-right: 40px;
+  color: $white;
+  margin-top: 20px;
+  text-align: left;
+  h2 {
+    padding-bottom: 20px;
+    font-size: 28px;
+  }
 }
 
 footer {
   background-color: rgba(20, 20, 20, 1);
   padding: 10px 0;
   text-align: center;
-  color: white;
+  color: $white;
 }
-/
+//
 @media only screen and (max-width: 575px) {
+//
   header {
     height: auto;
     nav {
