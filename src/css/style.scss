@@ -5,21 +5,20 @@
   font-family: oxygen_light;
 }
 
+* {
+  font-family: inherit;
+}
+
 .heading-styles {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-$white: #FFF;
-$brand-color: #c99124;
 
-body {
+body, p {
   font-family: oxygen_light;
 }
 
-* {
-  font-family: inherit;
-}
 
 a {
   color: black;
@@ -138,7 +137,9 @@ section {
     color: #B8183A;
     font-family: punktype;
   }
-
+  .image {
+    margin-bottom: 15px;
+  }
 }
 
 #resume {
@@ -155,158 +156,77 @@ section {
   }
 }
 
+// #projects {
+//   .image {
+//     margin-bottom: 15px;
+//   }
+// }
 
-
-
-.artsy {
-
-
-  .header_artsy {
-    width: 100%;
-    z-index: 1;
-    position: fixed;
-    margin-left: 0px;
-    background-color: white;
-    margin-top: -100px;
-    padding-top: 80px;
-    img {
-      float: left;
-    }
-    h1 {
-      font-family: punktype;
-      text-align: left;
-      padding-top: 10px;
-    }
-    // a {
-    //   font-family: oxygen_light;
-    // }
+// #resumes {
+//   a:not(:last-of-type) {
+//     margin-bottom: 5px;
+//   }
+// }
+.project_title {
+  width: 100%;
+  z-index: 1;
+  position: fixed;
+  margin-left: 0px;
+  background-color: white;
+  margin-top: -100px;
+  padding-top: 80px;
+  img {
+    float: left;
   }
-
-  .parallax {
-    height: 800px;
-    width: 100%;
-    background-image: url("/assets/images/j_tea.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-   }
-
-   .content {
-     text-align: center;
-     height: 50%;
-     p {
-       color: #777;
-     }
-     div {
-      background-color: $white ;
-        h2{
-        text-align: center;
-        color: $brand-secondary;
-        }
-      }
-    }
-
-
-  .parallax1 {
-    height: 700px;
-    width: 100%;
-    background-image: url("/assets/images/tea.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    // background-position: center;
-   }
-
-   .content1 {
-     text-align: center;
-     height: 50%;
-     p {
-       color: #777;
-     }
-     div {
-      background-color: $white ;
-      h2{
-        text-align: center;
-        color: $brand-secondary;
-      }
-    }
-  }
-  .parallax2 {
-    height: 700px;
-    width: 100%;
-    background-image: url("../assets/images/collage.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    // background-position: center;
-   }
-
-   .content2 {
-     text-align: center;
-     height: 50%;
-     p {
-       color: #777;
-     }
-     div {
-      background-color: $white ;
-      h2{
-        text-align: center;
-        color: $brand-secondary;
-      }
-    }
-  }
-
-  .project_info {
-    padding-top: 30px;
-    text-align: justify;
-    margin-top: 100px;
-      margin-left: 20px;
-    h2 {
+  h1 {
     font-family: punktype;
-    color: #18B89D;
-    padding-bottom: 20px;
-    }
-    div {
-     background-color: $white ;
-   }
+    text-align: left;
+    padding-top: 10px;
   }
-
-  .project_image {
-    margin-top: 50px;
-    margin-left: 20px;
-
-    img {
-      height: 600px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto
-    }
-  }
-  // #tech {
-  //   padding-top: 20px;
-  // }
-
 }
-#text {
+
+.project_tech {
+  padding-top: 30px;
+  text-align: justify;
+  margin-top: 100px;
   margin-left: 20px;
-  margin-top: 20px;
+  h2 {
+  font-family: punktype;
+  color: #18B89D;
+  padding-bottom: 20px;
+  }
+  div {
+   background-color: $white ;
+ }
+ p {
+   font-size: 20px;
+   font-family: oxygen_light;
+ }
 }
+
+.project_image {
+  margin-top: 50px;
+  margin-left: 20px;
+  img {
+    height: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+  }
+}
+
 
 #logos {
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 20px;
 }
-#projects {
-  .image {
-    margin-bottom: 15px;
-  }
-}
 
-#resumes {
-  a:not(:last-of-type) {
-    margin-bottom: 5px;
-  }
+
+#text {
+  margin-left: 20px;
+  margin-top: 20px;
+}
 
 footer {
   background-color: rgba(20, 20, 20, 1);
@@ -314,9 +234,8 @@ footer {
   text-align: center;
   color: white;
 }
-//
+/
 @media only screen and (max-width: 575px) {
-//
   header {
     height: auto;
     nav {
@@ -335,5 +254,83 @@ footer {
       }
     }
   }
-  }
 }
+
+
+
+
+
+
+// // use for index page parallax
+
+// .parallax {
+//   height: 800px;
+//   width: 100%;
+//   background-image: url("/assets/images/j_tea.jpg");
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-attachment: fixed;
+//  }
+//
+//  .content {
+//    text-align: center;
+//    height: 50%;
+//    p {
+//      color: #777;
+//    }
+//    div {
+//     background-color: $white ;
+//       h2{
+//       text-align: center;
+//       color: $brand-secondary;
+//       }
+//     }
+//   }
+
+// .parallax1 {
+//   height: 700px;
+//   width: 100%;
+//   background-image: url("/assets/images/tea.jpg");
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-attachment: fixed;
+//  }
+//
+//  .content1 {
+//    text-align: center;
+//    height: 50%;
+//    p {
+//      color: #777;
+//    }
+//    div {
+//     background-color: $white ;
+//     h2 {
+//       text-align: center;
+//       color: $brand-secondary;
+//     }
+//   }
+// }
+// .parallax2 {
+//   height: 700px;
+//   width: 100%;
+//   background-image: url("../assets/images/collage.jpg");
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-attachment: fixed;
+//   // background-position: center;
+//  }
+//
+//  .content2 {
+//    text-align: center;
+//    height: 50%;
+//    p {
+//      color: #777;
+//    }
+//    div {
+//     background-color: $white ;
+//     h2 {
+//       text-align: center;
+//       color: $brand-secondary;
+//     }
+//   }
+// }
